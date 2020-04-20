@@ -1,0 +1,95 @@
+@mixin padding-y($top, $bottom) {
+    padding-top: $top;
+    padding-bottom: $bottom;
+}
+
+@mixin padding-x($right, $left) {
+    padding-left: $left;
+    padding-right: $right;
+}
+
+@mixin margin-y($top, $bottom) {
+    margin-top: $top;
+    margin-bottom: $bottom;
+}
+
+@mixin margin-x($right, $left) {
+    margin-right: $right;
+    margin-left: $left;
+}
+
+@mixin flex($content) {
+    display: flex;
+    justify-content: $content;
+    align-items: center;
+}
+
+@mixin grid($column, $row) {
+    display: grid;
+    grid-template-columns: $column;
+    grid-template-rows: $row;
+}
+
+@mixin absolute($width, $height) {
+    position: absolute;
+    height: $height;
+    width: $width;
+}
+
+@mixin relative($width, $height) {
+    position: relative;
+    height: $height;
+    width: $width;
+}
+
+.p-nav {
+    @include padding-x( 100px, 100px);
+}
+
+.p-x {
+    @include padding-x(100px, 100px);
+}
+
+.p-y {
+    @include padding-y(70px, 30px);
+}
+
+.p-x-250 {
+    @include padding-x(250px, 250px);
+}
+
+.p-y-60 {
+    @include padding-y(60px, 60px);
+}
+
+.m-t-15 {
+    @include margin-y(15px, 0px)
+}
+
+.m-40 {
+    @include margin-y(40px, 40px);
+    @include margin-x(40px, 40px);
+}
+
+section {
+    position: relative;
+    width: 100%;
+    background-attachment: fixed;
+}
+
+.container-nav {
+    position: relative;
+    @include flex(space-between);
+    width: 100%;
+}
+
+.container {
+    margin: 0;
+    @include flex(center);
+}
+
+.container-content {
+    position: relative;
+    @include flex(space-around);
+    width: 100%;
+}

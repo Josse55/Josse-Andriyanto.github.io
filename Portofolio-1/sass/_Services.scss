@@ -1,0 +1,16 @@
+#services {
+    text-align: center;
+    background: linear-gradient(180deg, #12222d 60%, #3f8ffc 40%);
+}
+
+.serviceBx {
+    @include relative(300px, 350px);
+    @include flex(center);
+    img {
+        max-width: 120px;
+    }
+    h5 {
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+}

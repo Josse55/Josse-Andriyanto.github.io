@@ -1,0 +1,4 @@
+footer {
+    @include relative(100%, 40px);
+    @include flex(center);
+}

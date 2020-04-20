@@ -1,0 +1,22 @@
+#client {
+    text-align: center;
+    p {
+        @include margin-y(10px, 0px);
+    }
+}
+
+.imgClient {
+    @include flex(space-between);
+    @include margin-y(40px, 0px);
+    flex-wrap: wrap;
+    img {
+        max-width: 200px;
+        margin: 20px;
+        opacity: .25;
+        cursor: pointer;
+        transition: .5s;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

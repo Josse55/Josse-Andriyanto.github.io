@@ -1,0 +1,7 @@
+.serviceBx {
+    @include relative(350px, 100px);
+    @include flex(center);
+    .box {
+        text-align: center;
+    }
+}

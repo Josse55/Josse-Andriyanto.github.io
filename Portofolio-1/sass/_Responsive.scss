@@ -1,0 +1,81 @@
+@media screen and (max-width:1134px) {
+    /* navbar */
+    .container {
+        justify-content: center;
+        flex-direction: column;
+    }
+    .container-content {
+        justify-content: center;
+        flex-direction: column;
+    }
+    .container-content-2 {
+        justify-content: unset;
+        flex-direction: column;
+    }
+    .p-nav {
+        @include padding-x(20px, 20px);
+    }
+    p {
+        @include margin-y(20px, 0px);
+    }
+    .navbar {
+        width: 100%;
+    }
+    .nav-link {
+        @include absolute(100%, 380px);
+        background-color: #162c3b;
+        display: none;
+        margin-left: -20px;
+        margin-top: 160px;
+        ul {
+            @include flex(center);
+            flex-direction: column;
+        }
+    }
+    .nav-link-button i,
+    .nav-link-close i {
+        margin: 0;
+        transform: translateY(0%);
+    }
+    .nav-link-button {
+        display: block;
+    }
+    .nav-link-close {
+        display: none;
+    }
+    // about
+    #about {
+        flex-direction: column;
+    }
+    .contentAbout,
+    .imgBx,
+    .imgBx2 {
+        @include padding-x(50px, 50px);
+        @include padding-y(50px, 50px);
+        width: 100%;
+        min-height: 600px;
+        text-align: center;
+    }
+    // services
+    .serviceBx {
+        @include margin-y(20px, 20px);
+    }
+    // technology
+    #technology {
+        flex-direction: column;
+    }
+    .contentTechnology {
+        @include margin-y(20px, 20px);
+    }
+    .imgTechnology {
+        @include margin-y(20px, 20px);
+    }
+    // client
+    .imgClient {
+        justify-content: center;
+    }
+    // testimonials
+    .contentTestimonials {
+        @include margin-y(20px, 20px);
+    }
+}

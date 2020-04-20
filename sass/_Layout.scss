@@ -1,0 +1,78 @@
+@mixin padding-y($top, $bottom) {
+    padding-top: $top;
+    padding-bottom: $bottom;
+}
+
+@mixin padding-x($right, $left) {
+    padding-left: $left;
+    padding-right: $right;
+}
+
+@mixin margin-y($top, $bottom) {
+    margin-top: $top;
+    margin-bottom: $bottom;
+}
+
+@mixin flex($content) {
+    display: flex;
+    justify-content: $content;
+    align-items: center;
+}
+
+@mixin absolute($width, $height) {
+    position: absolute;
+    height: $height;
+    width: $width;
+}
+
+@mixin relative($width, $height) {
+    position: relative;
+    height: $height;
+    width: $width;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    background-attachment: fixed;
+}
+
+.p-nav {
+    @include padding-x( 145px, 145px);
+}
+
+.p-x {
+    @include padding-x(145px, 145px);
+}
+
+.p-y {
+    @include padding-y(60px, 60px);
+}
+
+.m-y {
+    @include margin-y(50px, 50px);
+}
+
+.container-nav {
+    position: relative;
+    @include flex(space-between);
+    width: 100%;
+}
+
+.container {
+    margin: 0;
+    @include flex(center);
+    flex-direction: column;
+}
+
+.container-content {
+    position: relative;
+    @include flex(space-between);
+    width: 100%;
+}
+
+.container-content-2 {
+    position: relative;
+    @include flex(space-evenly);
+    width: 100%;
+}

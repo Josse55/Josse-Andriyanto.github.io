@@ -1,0 +1,5 @@
+footer {
+    @include relative(100%, 40px);
+    @include flex(center);
+    border-top: 1px solid #dfcdc3;
+}

@@ -1,0 +1,29 @@
+#testimonials {
+    position: relative;
+    text-align: center;
+    h2 {
+        color: white;
+    }
+}
+
+.contentTestimonials {
+    @include padding-y(50px, 50px);
+    @include padding-x(60px, 60px);
+    @include flex(center);
+    text-align: center;
+    width: 550px;
+    text-align: left;
+    p {
+        font-style: italic;
+    }
+    a {
+        text-decoration: none;
+        h6 {
+            @include margin-y(10px, 0px);
+            width: 100%;
+            color: #3f8ffc;
+            text-align: end;
+            font-weight: 400;
+        }
+    }
+}

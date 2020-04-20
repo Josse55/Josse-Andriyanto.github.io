@@ -1,0 +1,59 @@
+@media screen and (max-width:1340px) {
+    /* navbar */
+    .container-content {
+        justify-content: center;
+        flex-direction: column;
+    }
+    .container-content-2 {
+        justify-content: unset;
+        flex-direction: column;
+    }
+    .p-nav {
+        @include padding-x(20px, 20px);
+    }
+    .navbar {
+        width: 100%;
+    }
+    .nav-link {
+        @include absolute(100%, 220px);
+        background-color: #7cd9ea;
+        display: none;
+        margin-left: -20px;
+        margin-top: 90px;
+    }
+    .nav-link ul {
+        @include flex(center);
+        flex-direction: column;
+    }
+    .nav-link-button i,
+    .nav-link-close i {
+        margin: 0;
+        transform: translateY(0%);
+    }
+    .nav-link-button {
+        display: block;
+    }
+    .nav-link-close {
+        display: none;
+    }
+    /* portfolio */
+    .Box {
+        margin: 30px auto;
+    }
+    /* skills */
+    .card {
+        @include flex(center);
+        width: 100%;
+    }
+    /* contact */
+    .contact-content {
+        flex-direction: column;
+    }
+    .contact-title {
+        width: 270px;
+        height: 72px;
+    }
+    .sosmed-row {
+        margin: 10px auto;
+    }
+}

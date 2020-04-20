@@ -1,0 +1,15 @@
+#technology {
+    @include flex(space-between);
+    width: 100%;
+}
+
+.contentTechnology {
+    max-width: 800px;
+}
+
+.imgTechnology {
+    max-width: 250px;
+    img {
+        max-width: 100%;
+    }
+}

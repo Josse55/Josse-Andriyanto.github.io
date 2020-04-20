@@ -1,0 +1,27 @@
+#home {
+    @include flex(center);
+    height: 100vh;
+    background: #000000;
+    img {
+        @include absolute(100%, 100%);
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        opacity: .5;
+    }
+    .content {
+        @include relative(450px, 300px);
+        @include flex(center);
+        flex-direction: column;
+        text-align: center;
+        h1 {
+            font-weight: bold;
+        }
+        h4 {
+            font-weight: 800;
+        }
+        h6 {
+            font-weight: 400;
+        }
+    }
+}

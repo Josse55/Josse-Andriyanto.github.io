@@ -1,0 +1,49 @@
+#contact {
+    text-align: center;
+}
+
+.inputBx {
+    @include margin-y(0px, 40px);
+    input {
+        @include padding-y(10px, 10px);
+        width: 100%;
+        background: transparent;
+        box-shadow: none;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        font-weight: 400;
+        color: white;
+        border-bottom: 2px solid white;
+        &::placeholder {
+            color: white;
+        }
+        &[type="submit"] {
+            width: 150px;
+            background: white;
+            color: red;
+            cursor: pointer;
+            font-weight: 600;
+            border-radius: 7px;
+        }
+    }
+    textarea {
+        background: url(../img/bg2.jpg);
+        width: 50%;
+        background-position: center;
+        background-size: cover;
+        @include padding-y(10px, 10px);
+        width: 100%;
+        background: transparent;
+        box-shadow: none;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        font-weight: 400;
+        color: white;
+        border-bottom: 2px solid white;
+        &::placeholder {
+            color: white;
+        }
+    }
+}

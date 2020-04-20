@@ -1,0 +1,161 @@
+#skills {
+    margin: 0;
+    height: 100vh;
+}
+
+.parallax {
+    @include absolute(100%, 100%);
+    top: 0;
+    left: 0;
+    background: transparent;
+}
+
+.card {
+    @include relative(600px, 500px);
+    &:nth-child(1) {
+        @include flex(center);
+    }
+    &:nth-child(2) {
+        @include flex(center);
+        flex-direction: column;
+    }
+    .box {
+        @include relative(300px, 400px);
+        &::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            bottom: -2px;
+            right: -2px;
+            filter: blur(2px);
+            transform: skew(3deg, 3deg);
+            background: linear-gradient(45deg, #67b5d4, #0019fb);
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            bottom: -2px;
+            right: -2px;
+            z-index: -1;
+            filter: blur(8px);
+            transform: skew(5deg, 5deg);
+            background: linear-gradient(45deg, #67b5d4, #0019fb);
+        }
+        .img {
+            @include absolute(100%, 100%);
+            overflow: hidden;
+            border-top-right-radius: 6.5%;
+            border-bottom-left-radius: 6.5%;
+            border-top-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            &::before {
+                content: '';
+                @include absolute(50%, 100%);
+                right: -100%;
+                background: rgba(255, 255, 255, 0.15);
+                z-index: 100;
+                transform: skewX(30deg);
+                transition: 1s;
+            }
+            img {
+                @include absolute(100%, 100%);
+                transform: scale(1);
+                transition: 1.5s;
+            }
+        }
+    }
+    .skill-bar {
+        position: relative;
+        width: 500px;
+        .bar {
+            display: flex;
+            position: relative;
+            align-items: center;
+            color: white;
+            margin: 15px 0;
+            padding: 12px 10px;
+            background: linear-gradient(whitesmoke 0%, grey 30%, rgba(0, 0, 0, 0.6));
+            border-radius: 5px;
+            transition: .3s ease-in-out;
+            .name {
+                position: relative;
+                width: 120px;
+                text-align: left;
+                font-size: 14px;
+            }
+            .value {
+                position: relative;
+                width: 40px;
+                text-align: left;
+            }
+            .percent {
+                position: relative;
+                width: calc(100% - 160px);
+                height: 15px;
+                margin: 0 10px;
+                border-radius: 10px;
+                overflow: hidden;
+                background: linear-gradient(0deg, black 0%, black 50%, rgb(24, 24, 24) 50%, rgb(24, 24, 24) 100%);
+                .progress {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 15px;
+                    border-radius: 10px;
+                    background: linear-gradient(45deg, #67b5d4, #0019fb);
+                    animation: animate 3s ease-in-out forwards;
+                }
+            }
+        }
+    }
+}
+
+.card .box:hover .img:before {
+    right: 150%;
+}
+
+.card .box:hover .img img {
+    transform: scale(1.1);
+}
+
+.card .skill-bar:hover .bar {
+    opacity: .1;
+}
+
+.card .skill-bar .bar:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+@keyframes animate {
+    from {
+        width: 0;
+    }
+}
+
+.card .skill-bar .bar:nth-child(1) .percent .progress {
+    width: 95%;
+}
+
+.card .skill-bar .bar:nth-child(2) .percent .progress {
+    width: 93%;
+}
+
+.card .skill-bar .bar:nth-child(3) .percent .progress {
+    width: 86%;
+}
+
+.card .skill-bar .bar:nth-child(4) .percent .progress {
+    width: 90%;
+}
+
+.card .skill-bar .bar:nth-child(5) .percent .progress {
+    width: 85%;
+}
+
+.card .skill-bar .bar:nth-child(6) .percent .progress {
+    width: 88%;
+}

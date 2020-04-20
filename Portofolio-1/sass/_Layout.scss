@@ -1,0 +1,86 @@
+@mixin padding-y($top, $bottom) {
+    padding-top: $top;
+    padding-bottom: $bottom;
+}
+
+@mixin padding-x($right, $left) {
+    padding-left: $left;
+    padding-right: $right;
+}
+
+@mixin margin-y($top, $bottom) {
+    margin-top: $top;
+    margin-bottom: $bottom;
+}
+
+@mixin flex($content) {
+    display: flex;
+    justify-content: $content;
+    align-items: center;
+}
+
+@mixin absolute($width, $height) {
+    position: absolute;
+    height: $height;
+    width: $width;
+}
+
+@mixin relative($width, $height) {
+    position: relative;
+    height: $height;
+    width: $width;
+}
+
+.p-nav {
+    @include padding-x( 100px, 100px);
+}
+
+.p-x {
+    @include padding-x(145px, 145px);
+}
+
+.p-y {
+    @include padding-y(60px, 60px);
+}
+
+.p-100 {
+    @include padding-x(100px, 100px);
+    @include padding-y(100px, 100px);
+}
+
+.m-t-60 {
+    @include margin-y(60px, 0px);
+}
+
+.m-t-40 {
+    @include margin-y(40px, 0px);
+}
+
+section {
+    position: relative;
+    width: 100%;
+    background-attachment: fixed;
+}
+
+.container-nav {
+    position: relative;
+    @include flex(space-between);
+    width: 100%;
+}
+
+.container {
+    margin: 0;
+    @include flex(center);
+}
+
+.container-content {
+    position: relative;
+    @include flex(space-between);
+    width: 100%;
+}
+
+.container-content-2 {
+    position: relative;
+    @include flex(space-evenly);
+    width: 100%;
+}

@@ -1,0 +1,64 @@
+@mixin icon() {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    margin-right: 10px;
+    border-radius: 50%;
+    text-align: center;
+    -webkit-box-shadow: 0px 0px 15px -1px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 15px -1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 15px -1px rgba(0, 0, 0, 0.3);
+    transition: 0.2s;
+}
+
+@mixin span() {
+    span {
+        color: white;
+        i {
+            transform: translateY(8px);
+        }
+    }
+}
+
+#contact {
+    max-width: 100vw;
+}
+
+.contact-title {
+    width: 50%;
+    height: 100%;
+    @include flex(none);
+}
+
+.sosmed {
+    @include relative(50%, 100%);
+    @include flex(none);
+}
+
+.sosmed-row {
+    @include relative(190px, 50px);
+    @include flex(right);
+    flex-direction: row;
+    margin-left: 330px;
+}
+
+.icon-fb {
+    @include icon();
+    @include span();
+    background: rgb(35, 0, 255);
+    background: linear-gradient(121deg, rgba(35, 0, 255, 1) 0%, rgba(50, 181, 255, 1) 100%);
+}
+
+.icon-ig {
+    @include icon();
+    @include span();
+    background: rgb(183, 0, 95);
+    background: linear-gradient(135deg, rgba(183, 0, 95, 1) 0%, rgba(253, 226, 58, 1) 100%);
+}
+
+.icon-github {
+    @include icon();
+    @include span();
+    background: rgb(0, 0, 188);
+    background: linear-gradient(135deg, rgba(0, 0, 188, 1) 0%, rgba(255, 0, 162, 1) 100%);
+}

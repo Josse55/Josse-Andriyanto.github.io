@@ -1,0 +1,58 @@
+#traveling {
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.title {
+    @include flex(center);
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    h2 {
+        text-transform: uppercase;
+    }
+    p {
+        @include margin-y(10px, 10px);
+    }
+}
+
+.box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    &:hover img {
+        opacity: .7;
+    }
+    &:hover span {
+        bottom: 0;
+    }
+    img {
+        @include absolute(100%, 100%);
+        opacity: 1;
+        transition: .5s;
+    }
+    span {
+        @include absolute(100%, 15%);
+        bottom: -100%;
+        left: 0;
+        transition: .5s;
+        .text-1 {
+            font-size: 35px;
+            text-align: center;
+        }
+        .text-2 {
+            font-size: 18px;
+            text-align: center;
+        }
+    }
+}
+
+.size-1 {
+    width: 555px;
+    height: 300px;
+}
+
+.size-2 {
+    width: 365px;
+    height: 160px;
+}
